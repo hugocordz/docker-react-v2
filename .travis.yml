@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t hugocordz/docjer-react-v2 -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true hugocordz/docjer-react-v2 npm run test -- --coverage
