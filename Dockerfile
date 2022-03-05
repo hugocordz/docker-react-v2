@@ -9,4 +9,5 @@ RUN chown -R node /app/node_modules
 USER node
 
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
