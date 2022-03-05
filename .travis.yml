@@ -9,7 +9,7 @@ script:
   - docker run -e CI=true hugocordz/docjer-react-v2 npm run test -- --coverage
 
 deploy:
-  provider: elasticbeanstal;
+  provider: elasticbeanstal
   region: us-east-2
   app: docker-react-v2
   env: Dockerreactv2-env
